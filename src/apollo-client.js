@@ -2,7 +2,7 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const createApolloClient = () => {
   return new ApolloClient({
-    uri: "https://datastory-cloud-v2.stellate.sh/",
+    uri: process.env.GRAPHQL_URL,
     cache: new InMemoryCache(),
   });
 };

@@ -9,9 +9,9 @@ export default function InputList({ value, onChange, placeholder, size, message,
   const iconRight = isOpen ? <ArrowDownIcon /> : <ArrowForwardIcon/>
 
   useEffect(() => {
-    const inputSize = document?.querySelectorAll('#ds-input')[0].clientWidth
+    const inputSize = document?.querySelectorAll('#ds-input')[0].clientWidth;
     if(inputSize > 0) {
-      setInputWidth(`${inputSize}px`)
+      setInputWidth(`${inputSize}px`);
     }
   }, []);
 
