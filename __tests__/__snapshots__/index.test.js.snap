@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page renders initial page 1`] = `
+<div>
+  <div
+    class="css-hboir5"
+  >
+    <div
+      class="chakra-container css-s2ohfa"
+    >
+      <div
+        class="css-1rkksne"
+      >
+        <h2
+          class="chakra-heading css-zvlevn"
+        >
+          Currency Search
+        </h2>
+      </div>
+      <div
+        class="css-gmuwbf"
+      >
+        <div
+          class="css-1da4kij"
+        >
+          <b
+            class="chakra-text css-iopiu5"
+          >
+            From
+          </b>
+          <div
+            class="css-2w322j"
+          >
+            <div
+              class="chakra-input__group css-bx0blc"
+              data-group="true"
+            >
+              <input
+                class="chakra-input css-0"
+                id="ds-input"
+                placeholder="Country Name"
+                value=""
+              />
+              <div
+                class="chakra-input__right-element css-dp9r5f"
+              >
+                <button
+                  aria-label="clear input"
+                  class="chakra-button css-p7mkev"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="chakra-icon css-onkibi"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="chakra-collapse"
+              style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+            >
+              <ul
+                class="css-h2imyi"
+                role="list"
+              >
+                <p
+                  class="chakra-text css-ax9bdp"
+                />
+              </ul>
+            </div>
+          </div>
+          <div
+            class="css-mifb2i"
+          >
+            <p
+              class="chakra-text css-1cq884l"
+            />
+             
+            <b
+              class="chakra-text css-1cq884l"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-sq91g9"
+    >
+      <div
+        class="chakra-wrap css-1vae7t2"
+      >
+        <ul
+          class="chakra-wrap__list css-19lo6pj"
+        >
+          <li
+            class="chakra-wrap__listitem css-1yp4ln"
+          >
+            <div
+              class="css-gmuwbf"
+            >
+              <b
+                class="chakra-text css-1it6ou0"
+              >
+                Copyright © 2023 - by Amanda Nascimento
+              </b>
+              <a
+                href="https://github.com/amandaalmeida89/datastory-code-challenge"
+                target="new"
+              >
+                <img
+                  alt="github Logo"
+                  data-nimg="1"
+                  decoding="async"
+                  height="30"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fgithub.png&w=64&q=75"
+                  srcset="/_next/image?url=%2Fgithub.png&w=32&q=75 1x, /_next/image?url=%2Fgithub.png&w=64&q=75 2x"
+                  style="color: transparent;"
+                  width="30"
+                />
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Page should return input value and currency selected 1`] = `
+<div>
+  <div
+    class="css-hboir5"
+  >
+    <div
+      class="chakra-container css-s2ohfa"
+    >
+      <div
+        class="css-1rkksne"
+      >
+        <h2
+          class="chakra-heading css-zvlevn"
+        >
+          Currency Search
+        </h2>
+      </div>
+      <div
+        class="css-gmuwbf"
+      >
+        <div
+          class="css-1da4kij"
+        >
+          <b
+            class="chakra-text css-iopiu5"
+          >
+            From
+          </b>
+          <div
+            class="css-2w322j"
+          >
+            <div
+              class="chakra-input__group css-bx0blc"
+              data-group="true"
+            >
+              <input
+                class="chakra-input css-0"
+                id="ds-input"
+                placeholder="Country Name"
+                value="Sweden"
+              />
+              <div
+                class="chakra-input__right-element css-dp9r5f"
+              >
+                <button
+                  aria-label="clear input"
+                  class="chakra-button css-p7mkev"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="chakra-icon css-onkibi"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="chakra-collapse"
+              style="overflow: hidden; display: block; opacity: 1; height: 0px;"
+            >
+              <ul
+                class="css-h2imyi"
+                role="list"
+              >
+                <li
+                  class="css-1kztbxf"
+                >
+                  <div
+                    class="css-k008qs"
+                  >
+                    <p
+                      class="chakra-text css-1cq884l"
+                    >
+                      Swedish krona
+                    </p>
+                     
+                    <b
+                      class="chakra-text css-1cq884l"
+                    >
+                      (Sweden)
+                    </b>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="css-mifb2i"
+          >
+            <p
+              class="chakra-text css-1cq884l"
+            >
+              Swedish krona
+            </p>
+             
+            <b
+              class="chakra-text css-1cq884l"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-sq91g9"
+    >
+      <div
+        class="chakra-wrap css-1vae7t2"
+      >
+        <ul
+          class="chakra-wrap__list css-19lo6pj"
+        >
+          <li
+            class="chakra-wrap__listitem css-1yp4ln"
+          >
+            <div
+              class="css-gmuwbf"
+            >
+              <b
+                class="chakra-text css-1it6ou0"
+              >
+                Copyright © 2023 - by Amanda Nascimento
+              </b>
+              <a
+                href="https://github.com/amandaalmeida89/datastory-code-challenge"
+                target="new"
+              >
+                <img
+                  alt="github Logo"
+                  data-nimg="1"
+                  decoding="async"
+                  height="30"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fgithub.png&w=64&q=75"
+                  srcset="/_next/image?url=%2Fgithub.png&w=32&q=75 1x, /_next/image?url=%2Fgithub.png&w=64&q=75 2x"
+                  style="color: transparent;"
+                  width="30"
+                />
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
