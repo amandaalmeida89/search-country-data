@@ -1,6 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import { ApolloProvider } from "@apollo/client";
-import createApolloClient from "../apollo-client";
+import { ApolloProvider } from '@apollo/client';
+import createApolloClient from '../apollo-client';
 
 function App({ Component, pageProps }) {
   const client = createApolloClient();

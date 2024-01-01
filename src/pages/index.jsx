@@ -1,11 +1,12 @@
 'use client'
 import { useState, useEffect, useMemo, useCallback } from 'react';
-import { useLazyQuery } from "@apollo/client";
+import { useLazyQuery } from '@apollo/client';
 import GetCurrencyQuery from '../gql/getCurrency'
-import { Container, Text, Heading, Center, Flex, Wrap, WrapItem } from '@chakra-ui/react'
-import Image from 'next/image'
+import { Container, Text, Heading, Center, Flex } from '@chakra-ui/react'
 import InputList from '../components/InputList'
 import TextItem from '../components/TextItem'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import messages from '../texts'
 import debounce from 'lodash.debounce';
 
@@ -91,6 +92,7 @@ export default function Page() {
 
   return (
     <Flex w='100%'>
+      <Header></Header>
       <Container p='16' minW= '100%' position='relative' height='100vh' bg='white'>
         <Center minH='150px' mt='5%'>
           <Heading as='h2' size={['sm', 'md', 'lg', 'xl']} noOfLines={1}>{messages.heding}</Heading>
@@ -121,18 +123,7 @@ export default function Page() {
           </Flex>
         </Center>
       </Container>
-      <Flex alignContent='center' justifyContent='center' bg='blue.600' position='fixed' w='100%' bottom='0px'>
-        <Wrap p='6'>
-          <WrapItem>
-            <Center>
-              <Text mr='8px' color='white' as='b' fontSize={{ base: "14px", md: "16px", lg: "16px" }}>Copyright &copy; 2023 - by Amanda Nascimento</Text>
-              <a target="new" href="https://github.com/amandaalmeida89/datastory-code-challenge">
-                <Image width={30} height={30} src='/github.png' alt="github Logo"></Image>
-              </a>
-            </Center>
-          </WrapItem>
-        </Wrap>
-      </Flex>
+      <Footer></Footer>
     </Flex>
   )
-}
+};
