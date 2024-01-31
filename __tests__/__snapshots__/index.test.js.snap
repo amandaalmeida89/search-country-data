@@ -106,11 +106,13 @@ exports[`Page renders initial page 1`] = `
             <div
               class="css-gmuwbf"
             >
-              <b
+              <p
                 class="chakra-text css-1it6ou0"
               >
-                Copyright © 2023 - by Amanda Nascimento
-              </b>
+                Copyright © 
+                2024
+                 - by Amanda Nascimento
+              </p>
               <a
                 href="https://github.com/amandaalmeida89/datastory-code-challenge"
                 target="new"
@@ -260,11 +262,13 @@ exports[`Page should return input value and currency selected 1`] = `
             <div
               class="css-gmuwbf"
             >
-              <b
+              <p
                 class="chakra-text css-1it6ou0"
               >
-                Copyright © 2023 - by Amanda Nascimento
-              </b>
+                Copyright © 
+                2024
+                 - by Amanda Nascimento
+              </p>
               <a
                 href="https://github.com/amandaalmeida89/datastory-code-challenge"
                 target="new"

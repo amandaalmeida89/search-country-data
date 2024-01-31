@@ -74,7 +74,7 @@ export default function Page() {
     if(validCountriesList && validCountryName) {
       const items = countries?.map(({ name, currency }) => {
         return {
-          name,
+          name: `(${name})`,
           value: currency
         };
       });

@@ -2,7 +2,7 @@ import '@testing-library/jest-dom'
 import { render, screen, fireEvent } from '@testing-library/react'
 import Page from '../src/pages/index'
 import { MockedProvider } from '@apollo/client/testing';
-import GetCurrencyQuery from '../src/gql/getCurrency';
+import GetCurrencyQuery from '../src/graphql/queries/getCurrency';
 
 window.scrollTo = jest.fn();
 
@@ -11,24 +11,16 @@ const mocks = [
     request: {
       query: GetCurrencyQuery,
       variables: {
-        countryName: 'Sweden%'
+        countryName: 'Sweden'
       }
     },
     result: {
       data: {
-        item: [
-          {
-            nameEn: "Sweden",
-            currency: [
-              {
-                object: {
-                  nameEn: "Swedish krona"
-                }
-              }
-            ]
-          },
-        ]
-      }
+        countries: [{
+          name: 'Sweden',
+          currency: 'Swedish krona'
+        }
+      ]}
     }
   }
 ];
