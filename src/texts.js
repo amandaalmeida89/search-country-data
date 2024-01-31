@@ -4,6 +4,6 @@ const messages = {
   searchError: 'Something went wrong',
   currencyNotFound: 'Currency not found',
   countryName: 'Country Name'
-}
+};
 
-export default messages
+export default messages;

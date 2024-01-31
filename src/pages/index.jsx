@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useLazyQuery } from '@apollo/client';
-import GetCurrencyQuery from '../gql/getCurrency'
+import GetCurrencyQuery from '../graphql/queries/getCurrency'
 import { Container, Text, Heading, Center, Flex } from '@chakra-ui/react'
 import InputList from '../components/InputList'
 import TextItem from '../components/TextItem'
@@ -17,12 +17,12 @@ export default function Page() {
   const [isOpen, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [searchCountry, { loading, error, data }] = useLazyQuery(GetCurrencyQuery);
-  const { item } = data || {};
+  const { countries } = data || {}
 
   const validCountryName = countryName.length >= 3;
 
-  const sendRequest = useCallback((value) => {
-    searchCountry({ variables: { countryName: `${value}%` }});
+  const sendRequest = useCallback((countryName) => {
+    searchCountry({ variables: { countryName }});
   }, [searchCountry]);
 
   const debouncedSendRequest = useMemo(() => {
@@ -69,14 +69,13 @@ export default function Page() {
   };
 
   useEffect(() => {
-    const validCountriesList = item?.length > 0;
+    const validCountriesList = countries?.length > 0;
 
     if(validCountriesList && validCountryName) {
-      const items = item?.map(({ nameEn, currency }) => {
-        const currencyCountry = currency[0]?.object?.nameEn
+      const items = countries?.map(({ name, currency }) => {
         return {
-          name: `(${nameEn})`,
-          value: `${currencyCountry}`
+          name,
+          value: currency
         };
       });
       setOpen(true);
@@ -88,7 +87,7 @@ export default function Page() {
       setCountriesList([]);
       setMessage(messages.searchError);
     }
-  }, [countryName, item, validCountryName, error]);
+  }, [countryName, countries, validCountryName, error]);
 
   return (
     <Flex w='100%'>

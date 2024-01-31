@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    GRAPHQL_URL: 'https://datastory-cloud-v2.stellate.sh/'
+    GRAPHQL_URL: '/api/graphql'
   }
 }
 
