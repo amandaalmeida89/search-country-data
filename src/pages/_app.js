@@ -1,5 +1,17 @@
-import '@/styles/globals.css'
+import { ChakraProvider } from '@chakra-ui/react';
+import { ApolloProvider } from '@apollo/client';
+import createApolloClient from '../apollo-client';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function App({ Component, pageProps }) {
+  const client = createApolloClient();
+
+  return (
+    <ApolloProvider client={client}>
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </ApolloProvider>
+  );
 }
+
+export default App;
