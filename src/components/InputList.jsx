@@ -1,9 +1,9 @@
-import { Flex, Input, Collapse, List, ListItem, IconButton, InputRightElement, InputGroup, Skeleton, Text } from '@chakra-ui/react'
-import { ArrowDownIcon, ArrowForwardIcon } from '@chakra-ui/icons'
-import TextItem from './TextItem'
+import { Flex, Input, Collapse, List, ListItem, IconButton, InputRightElement, InputGroup, Skeleton, Text } from '@chakra-ui/react';
+import { ArrowDownIcon, ArrowForwardIcon } from '@chakra-ui/icons';
+import TextItem from './TextItem';
 
 export default function InputList({ value, onChange, placeholder, size, message, onFocus, onBlur, isOpen, items, mt, loading, pickItem }) {
-  const iconRight = isOpen ? <ArrowDownIcon /> : <ArrowForwardIcon/>
+  const iconRight = isOpen ? <ArrowDownIcon /> : <ArrowForwardIcon/>;
 
   return (
     <Flex position='relative' direction='column' mt={mt}>
@@ -28,17 +28,17 @@ export default function InputList({ value, onChange, placeholder, size, message,
             :
             items?.map(({ name, value }, index) => {
               return (
-                <ListItem p='2' lineHeight='40px' _hover={{background: '#F8F6F4', color: 'blue.500'}} cursor='pointer' key={index} onClick={(e) => pickItem({ value, name })}>
+                <ListItem p='2' lineHeight='40px' _hover={{background: '#F8F6F4', color: 'blue.500'}} cursor='pointer' key={index} onClick={() => pickItem({ value, name })}>
                   <TextItem
                     value={value}
                     name={name}>
                   </TextItem>
                 </ListItem>
-              )
+              );
             })
           }
         </List>
       </Collapse>
     </Flex>
-  )
-};
+  );
+}

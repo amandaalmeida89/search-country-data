@@ -1,22 +1,22 @@
-import { countryInfo } from './country'
+import { countryInfo } from './country';
 
 const resolvers = {
   Query: {
     countries: async (_, { value }) => {
       const response = countryInfo.filter(({ name }) => {
-        const formattedName = name.toLowerCase()
-        const formattedValue = value.toLowerCase()
+        const formattedName = name.toLowerCase();
+        const formattedValue = value.toLowerCase();
     
-        return formattedName.startsWith(formattedValue)
+        return formattedName.startsWith(formattedValue);
       }).map(({ name, currency }) => {
         return {
           name,
           currency: currency.name
-        }
-      })
-      return response
+        };
+      });
+      return response;
     }
   }
-}
+};
 
-export default resolvers
+export default resolvers;

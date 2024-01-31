@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import messages from '../texts'
+import Head from 'next/head';
+import messages from '../texts';
 
 export default function Header() {
 
@@ -10,5 +10,5 @@ export default function Header() {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-  )
-};
+  );
+}

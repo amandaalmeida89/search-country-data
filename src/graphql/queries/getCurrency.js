@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 const GetCurrencyQuery = gql`
   query GetCurrency($countryName: String!) {
@@ -8,4 +8,4 @@ const GetCurrencyQuery = gql`
     }
   }
 `;
-export default GetCurrencyQuery
+export default GetCurrencyQuery;

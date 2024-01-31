@@ -1,13 +1,13 @@
-'use client'
+'use client';
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useLazyQuery } from '@apollo/client';
-import GetCurrencyQuery from '../graphql/queries/getCurrency'
-import { Container, Text, Heading, Center, Flex } from '@chakra-ui/react'
-import InputList from '../components/InputList'
-import TextItem from '../components/TextItem'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import messages from '../texts'
+import GetCurrencyQuery from '../graphql/queries/getCurrency';
+import { Container, Text, Heading, Center, Flex } from '@chakra-ui/react';
+import InputList from '../components/InputList';
+import TextItem from '../components/TextItem';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import messages from '../texts';
 import debounce from 'lodash.debounce';
 
 export default function Page() {
@@ -17,7 +17,7 @@ export default function Page() {
   const [isOpen, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [searchCountry, { loading, error, data }] = useLazyQuery(GetCurrencyQuery);
-  const { countries } = data || {}
+  const { countries } = data || {};
 
   const validCountryName = countryName.length >= 3;
 
@@ -55,12 +55,12 @@ export default function Page() {
 
     if(!validCountryName && !hasCountriesList) {
       handleFeedbackMessage('infoSearch');
-    };
+    }
 
     if(validCountryName && !hasCountriesList) {
       setCountriesList([]);
       handleFeedbackMessage('currencyNotFound');
-    };
+    }
   };
 
   const pickItem = ({ value }) => {
@@ -124,5 +124,5 @@ export default function Page() {
       </Container>
       <Footer></Footer>
     </Flex>
-  )
-};
+  );
+}

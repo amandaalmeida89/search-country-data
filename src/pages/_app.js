@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react';
 import { ApolloProvider } from '@apollo/client';
 import createApolloClient from '../apollo-client';
 
@@ -11,7 +11,7 @@ function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </ChakraProvider>
     </ApolloProvider>
-  )
+  );
 }
 
-export default App
+export default App;
