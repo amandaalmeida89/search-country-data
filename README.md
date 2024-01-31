@@ -13,4 +13,11 @@ npm run test
 # or for watch mode
 npm run test:watch
 ```
+Developed with:
 
+- React
+- Next.js
+- Graphql
+- Node.js
+- Chakra-ui
+- Jest
