@@ -69,7 +69,7 @@ export default function Page() {
       symbol,
       flag,
       phoneCode
-    }
+    };
     setCountryCurrencyItem(countryInfo);
     setOpen(false);
   };

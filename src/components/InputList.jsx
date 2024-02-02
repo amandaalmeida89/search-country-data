@@ -1,4 +1,4 @@
-import { Flex, Input, Collapse, List, ListItem, IconButton, InputRightElement, InputGroup, Skeleton, Text } from '@chakra-ui/react';
+import { Flex, Input, Collapse, List, ListItem, InputRightElement, InputGroup, Skeleton, Text } from '@chakra-ui/react';
 import { ArrowDownIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 import TextItem from './TextItem';
 
