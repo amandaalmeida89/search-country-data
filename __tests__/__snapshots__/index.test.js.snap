@@ -12,19 +12,19 @@ exports[`Page renders initial page 1`] = `
         class="css-1rkksne"
       >
         <h2
-          class="chakra-heading css-zvlevn"
+          class="chakra-heading css-5bia5c"
         >
-          Currency Search
+          Search country data
         </h2>
       </div>
       <div
         class="css-gmuwbf"
       >
         <div
-          class="css-1da4kij"
+          class="css-1wt0574"
         >
           <b
-            class="chakra-text css-iopiu5"
+            class="chakra-text css-1108u5m"
           >
             From
           </b>
@@ -44,23 +44,16 @@ exports[`Page renders initial page 1`] = `
               <div
                 class="chakra-input__right-element css-dp9r5f"
               >
-                <button
-                  aria-label="clear input"
-                  class="chakra-button css-p7mkev"
-                  type="button"
+                <svg
+                  class="chakra-icon css-14nh4z6"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="chakra-icon css-onkibi"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </button>
+                  <path
+                    d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                    fill="currentColor"
+                  />
+                </svg>
               </div>
             </div>
             <div
@@ -76,17 +69,6 @@ exports[`Page renders initial page 1`] = `
                 />
               </ul>
             </div>
-          </div>
-          <div
-            class="css-mifb2i"
-          >
-            <p
-              class="chakra-text css-1cq884l"
-            />
-             
-            <b
-              class="chakra-text css-1cq884l"
-            />
           </div>
         </div>
       </div>
@@ -150,19 +132,19 @@ exports[`Page should return input value and currency selected 1`] = `
         class="css-1rkksne"
       >
         <h2
-          class="chakra-heading css-zvlevn"
+          class="chakra-heading css-5bia5c"
         >
-          Currency Search
+          Search country data
         </h2>
       </div>
       <div
         class="css-gmuwbf"
       >
         <div
-          class="css-1da4kij"
+          class="css-1wt0574"
         >
           <b
-            class="chakra-text css-iopiu5"
+            class="chakra-text css-1108u5m"
           >
             From
           </b>
@@ -182,28 +164,21 @@ exports[`Page should return input value and currency selected 1`] = `
               <div
                 class="chakra-input__right-element css-dp9r5f"
               >
-                <button
-                  aria-label="clear input"
-                  class="chakra-button css-p7mkev"
-                  type="button"
+                <svg
+                  class="chakra-icon css-14nh4z6"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="chakra-icon css-onkibi"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </button>
+                  <path
+                    d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                    fill="currentColor"
+                  />
+                </svg>
               </div>
             </div>
             <div
               class="chakra-collapse"
-              style="overflow: hidden; display: block; opacity: 1; height: 0px;"
+              style="overflow: hidden; display: block; opacity: 0.9834163238338078; height: 0px;"
             >
               <ul
                 class="css-h2imyi"
@@ -215,34 +190,83 @@ exports[`Page should return input value and currency selected 1`] = `
                   <div
                     class="css-k008qs"
                   >
-                    <p
-                      class="chakra-text css-1cq884l"
-                    >
-                      Swedish krona
-                    </p>
-                     
                     <b
                       class="chakra-text css-1cq884l"
                     >
-                      (Sweden)
+                      Sweden
                     </b>
+                     
+                    <p
+                      class="chakra-text css-1cq884l"
+                    />
                   </div>
                 </li>
               </ul>
             </div>
           </div>
           <div
-            class="css-mifb2i"
+            class="css-1wmnidt"
           >
-            <p
-              class="chakra-text css-1cq884l"
+            <div
+              class="css-oc1vt3"
             >
-              Swedish krona
-            </p>
-             
-            <b
-              class="chakra-text css-1cq884l"
-            />
+              <b
+                class="chakra-text css-1cq884l"
+              >
+                Currency:
+              </b>
+               
+              <p
+                class="chakra-text css-1cq884l"
+              >
+                Swedish krona
+              </p>
+            </div>
+            <div
+              class="css-oc1vt3"
+            >
+              <b
+                class="chakra-text css-1cq884l"
+              >
+                PhoneCode:
+              </b>
+               
+              <p
+                class="chakra-text css-1cq884l"
+              >
+                46
+              </p>
+            </div>
+            <div
+              class="css-oc1vt3"
+            >
+              <b
+                class="chakra-text css-1cq884l"
+              >
+                Symbol:
+              </b>
+               
+              <p
+                class="chakra-text css-1cq884l"
+              >
+                Skr
+              </p>
+            </div>
+            <div
+              class="css-oc1vt3"
+            >
+              <b
+                class="chakra-text css-1cq884l"
+              >
+                Flag:
+              </b>
+               
+              <p
+                class="chakra-text css-1cq884l"
+              >
+                🇸🇪
+              </p>
+            </div>
           </div>
         </div>
       </div>

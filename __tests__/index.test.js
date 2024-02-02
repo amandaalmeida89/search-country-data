@@ -18,6 +18,9 @@ const mocks = [
       data: {
         countries: [{
           name: 'Sweden',
+          phoneCode: '46',
+          flag: '🇸🇪',
+          symbol: 'Skr',
           currency: 'Swedish krona'
         }
       ]}
@@ -32,7 +35,7 @@ describe('Page', () => {
         <Page />
       </MockedProvider>
     );
-    expect(await screen.findByText('Currency Search')).toBeInTheDocument();
+    expect(await screen.findByText('Search country data')).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
 
@@ -58,8 +61,14 @@ describe('Page', () => {
     await fireEvent.focus(input, { target: {}})
 
     //click event in currency collapse list
-    const list = await screen.findByText('Swedish krona')
+    const list = await screen.findByText('Sweden')
     await fireEvent.click(list)
+
+    //country list results
+    await screen.findByText('Swedish krona')
+    await screen.findByText('46')
+    await screen.findByText('🇸🇪')
+    await screen.findByText('Skr')
 
     expect(input).toHaveValue('Sweden')
     expect(container).toMatchSnapshot();

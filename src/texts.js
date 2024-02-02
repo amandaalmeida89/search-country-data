@@ -1,5 +1,5 @@
 const messages = { 
-  heding: 'Currency Search',
+  heding: 'Search country data',
   infoSearch: 'Type at least 3 letters to search.',
   searchError: 'Something went wrong',
   currencyNotFound: 'Currency not found',

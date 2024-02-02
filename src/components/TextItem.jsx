@@ -4,8 +4,8 @@ export default function TextItem({ value, name, mt }) {
 
   return (
     <Flex mt={mt}>
-      <Text fontSize={{ base: '14px', md: '16px', lg: '16px' }}>{value}</Text>&nbsp;
-      <Text fontSize={{ base: '14px', md: '16px', lg: '16px' }} as='b'>{name}</Text>
+      <Text fontSize={{ base: '14px', md: '16px', lg: '16px' }} as='b'>{name}</Text>&nbsp;
+      <Text fontSize={{ base: '14px', md: '16px', lg: '16px' }}>{value}</Text>
     </Flex>
   );
 }

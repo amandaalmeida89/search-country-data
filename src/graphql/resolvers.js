@@ -8,9 +8,12 @@ const resolvers = {
         const formattedValue = value.toLowerCase();
     
         return formattedName.startsWith(formattedValue);
-      }).map(({ name, currency }) => {
+      }).map(({ name, currency, flag, phoneCode }) => {
         return {
           name,
+          phoneCode,
+          flag: flag?.emoji || '',
+          symbol: currency?.symbol || '',
           currency: currency.name
         };
       });

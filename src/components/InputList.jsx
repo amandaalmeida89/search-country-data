@@ -3,7 +3,7 @@ import { ArrowDownIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 import TextItem from './TextItem';
 
 export default function InputList({ value, onChange, placeholder, size, message, onFocus, onBlur, isOpen, items, mt, loading, pickItem }) {
-  const iconRight = isOpen ? <ArrowDownIcon /> : <ArrowForwardIcon/>;
+  const iconRight = isOpen ? <ArrowDownIcon w={6} h={6} color="blue.500" /> : <ArrowForwardIcon w={6} h={6} color="blue.500"/>;
 
   return (
     <Flex position='relative' direction='column' mt={mt}>
@@ -16,7 +16,7 @@ export default function InputList({ value, onChange, placeholder, size, message,
           onBlur={onBlur}
           onChange={e => onChange(e.target.value)}/>
         <InputRightElement>
-          <IconButton aria-label='clear input' colorScheme='blue' icon={iconRight} />
+          {iconRight}
         </InputRightElement>
       </InputGroup>
       <Collapse in={isOpen }transition={{enter: {duration: 0.5}}}>
@@ -26,12 +26,11 @@ export default function InputList({ value, onChange, placeholder, size, message,
             : items?.length <= 0 ?
             <Text color='gray.500'>{message}</Text>
             :
-            items?.map(({ name, value }, index) => {
+            items?.map((item, index) => {
               return (
-                <ListItem p='2' lineHeight='40px' _hover={{background: '#F8F6F4', color: 'blue.500'}} cursor='pointer' key={index} onClick={() => pickItem({ value, name })}>
+                <ListItem p='2' lineHeight='40px' _hover={{background: '#F8F6F4', color: 'blue.500'}} cursor='pointer' key={index} onClick={() => pickItem(item)}>
                   <TextItem
-                    value={value}
-                    name={name}>
+                    name={item.name}>
                   </TextItem>
                 </ListItem>
               );

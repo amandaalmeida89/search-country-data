@@ -7,6 +7,9 @@ const typeDefs = gql`
 
   type Country {
     name: String,
+    flag: String,
+    symbol: String,
+    phoneCode: String,
     currency: String
   }
 `;

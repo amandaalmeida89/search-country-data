@@ -13,7 +13,7 @@ import debounce from 'lodash.debounce';
 export default function Page() {
   const [countryName, setCountryName] = useState('');
   const [countriesList, setCountriesList] = useState([]);
-  const [countryCurrencyItem, setCountryCurrencyItem] = useState('');
+  const [countryCurrencyItem, setCountryCurrencyItem] = useState({});
   const [isOpen, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [searchCountry, { loading, error, data }] = useLazyQuery(GetCurrencyQuery);
@@ -36,7 +36,7 @@ export default function Page() {
       debouncedSendRequest(value);
     } else {
       handleFeedbackMessage('infoSearch');
-      setCountryCurrencyItem('');
+      setCountryCurrencyItem({});
       setCountriesList([]);
     }
   };
@@ -63,8 +63,14 @@ export default function Page() {
     }
   };
 
-  const pickItem = ({ value }) => {
-    setCountryCurrencyItem(value);
+  const pickItem = ({ value, symbol, flag, phoneCode }) => {
+    const countryInfo = {
+      value,
+      symbol,
+      flag,
+      phoneCode
+    }
+    setCountryCurrencyItem(countryInfo);
     setOpen(false);
   };
 
@@ -72,10 +78,13 @@ export default function Page() {
     const validCountriesList = countries?.length > 0;
 
     if(validCountriesList && validCountryName) {
-      const items = countries?.map(({ name, currency }) => {
+      const items = countries?.map(({ name, flag, currency, symbol, phoneCode }) => {
         return {
-          name: `(${name})`,
-          value: currency
+          name,
+          phoneCode,
+          value: currency,
+          symbol,
+          flag
         };
       });
       setOpen(true);
@@ -94,11 +103,11 @@ export default function Page() {
       <Header></Header>
       <Container p='16' minW= '100%' position='relative' height='100vh' bg='white'>
         <Center minH='150px' mt='5%'>
-          <Heading as='h2' size={['sm', 'md', 'lg', 'xl']} noOfLines={1}>{messages.heding}</Heading>
+          <Heading color='blue.500' as='h2' size={['sm', 'md', 'lg', 'xl']} noOfLines={1}>{messages.heding}</Heading>
         </Center>
         <Center>
-          <Flex height='200px' direction='column' justify='center' maxW='980px' w='100%' border='2px' borderColor='gray.200' boxShadow='md' p='6' rounded='md' bg='white'>
-            <Text color='#1E1832' as='b' fontSize='lg'>From</Text>
+          <Flex direction='column' justify='center' maxW='980px' w='100%' border='2px' borderColor='gray.200' boxShadow='md' p='6' rounded='md' bg='white'>
+            <Text color='blue.500' as='b' fontSize='lg'>From</Text>
             <InputList
               mt='4px'
               value={countryName}
@@ -114,11 +123,14 @@ export default function Page() {
               loading={loading}
               >
             </InputList>
-            <TextItem
-              mt='16px'
-              value={countryCurrencyItem}
-              >
-            </TextItem>
+            {countryCurrencyItem?.value ?
+              <Flex mt='4px' flexDirection={'column'}>
+              <TextItem mt='8px' name="Currency:" value={countryCurrencyItem?.value}></TextItem>
+              <TextItem mt='8px' name="PhoneCode:" value={countryCurrencyItem?.phoneCode}></TextItem>
+              <TextItem mt='8px' name="Symbol:" value={countryCurrencyItem?.symbol}></TextItem>
+              <TextItem mt='8px' name="Flag:" value={countryCurrencyItem?.flag}></TextItem>
+            </Flex>
+            : ''}
           </Flex>
         </Center>
       </Container>
