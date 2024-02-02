@@ -1,20 +1,36 @@
-import { Flex, Input, Collapse, List, ListItem, InputRightElement, InputGroup, Skeleton, Text } from '@chakra-ui/react';
+import { Flex, Input, Collapse, List, ListItem, Tag, InputRightElement, InputGroup, TagLabel, TagCloseButton, Skeleton, Text } from '@chakra-ui/react';
 import { ArrowDownIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 import TextItem from './TextItem';
 
-export default function InputList({ value, onChange, placeholder, size, message, onFocus, onBlur, isOpen, items, mt, loading, pickItem }) {
+export default function InputList({ value, tagValue, onChange, removeItem, placeholder, size, message, onFocus, onBlur, isOpen, items, mt, loading, pickItem }) {
   const iconRight = isOpen ? <ArrowDownIcon w={6} h={6} color="blue.500" /> : <ArrowForwardIcon w={6} h={6} color="blue.500"/>;
 
   return (
     <Flex position='relative' direction='column' mt={mt}>
-      <InputGroup>
+      <InputGroup alignItems='center' position='relative'>
         <Input id='ds-input'
           placeholder={placeholder}
           size={size}
           value={value}
           onFocus={onFocus}
           onBlur={onBlur}
-          onChange={e => onChange(e.target.value)}/>
+          readOnly={!!tagValue}
+          onChange={e => onChange(e.target.value)}>
+        </Input>
+        {tagValue ?
+          <Tag
+            position='absolute'
+            size='md'
+            key='md'
+            margin='8px'
+            zIndex='3'
+            borderRadius='full'
+            variant='solid'
+            colorScheme='blue'>
+            <TagLabel>{tagValue}</TagLabel>
+            <TagCloseButton opacity='1' onClick={e => removeItem(e)}/>
+          </Tag>
+        : ''}
         <InputRightElement>
           {iconRight}
         </InputRightElement>

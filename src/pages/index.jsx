@@ -63,8 +63,14 @@ export default function Page() {
     }
   };
 
-  const pickItem = ({ value, symbol, flag, phoneCode }) => {
+  const removeItem = () => {
+    setCountryName('');
+    setCountryCurrencyItem({});
+  };
+
+  const pickItem = ({ name, value, symbol, flag, phoneCode }) => {
     const countryInfo = {
+      name,
       value,
       symbol,
       flag,
@@ -111,7 +117,9 @@ export default function Page() {
             <InputList
               mt='4px'
               value={countryName}
+              tagValue={countryCurrencyItem?.name}
               onChange={(value) => handleChange(value)}
+              removeItem={removeItem}
               pickItem={pickItem}
               onFocus={onFocus}
               onBlur={onBlur}

@@ -32,7 +32,7 @@ exports[`Page renders initial page 1`] = `
             class="css-2w322j"
           >
             <div
-              class="chakra-input__group css-bx0blc"
+              class="chakra-input__group css-115pn5h"
               data-group="true"
             >
               <input
@@ -152,15 +152,42 @@ exports[`Page should return input value and currency selected 1`] = `
             class="css-2w322j"
           >
             <div
-              class="chakra-input__group css-bx0blc"
+              class="chakra-input__group css-115pn5h"
               data-group="true"
             >
               <input
+                aria-readonly="true"
                 class="chakra-input css-0"
                 id="ds-input"
                 placeholder="Country Name"
+                readonly=""
                 value="Sweden"
               />
+              <span
+                class="css-1madzyw"
+              >
+                <span
+                  class="css-zvlevn"
+                >
+                  Sweden
+                </span>
+                <button
+                  aria-label="close"
+                  class="css-1clv9wk"
+                  type="button"
+                >
+                  <svg
+                    class="chakra-icon css-1md6f3y"
+                    focusable="false"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </span>
               <div
                 class="chakra-input__right-element css-dp9r5f"
               >
@@ -178,7 +205,7 @@ exports[`Page should return input value and currency selected 1`] = `
             </div>
             <div
               class="chakra-collapse"
-              style="overflow: hidden; display: block; opacity: 0.9834163238338078; height: 0px;"
+              style="overflow: hidden; display: block; opacity: 1; height: 0px;"
             >
               <ul
                 class="css-h2imyi"
